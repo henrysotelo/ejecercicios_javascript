@@ -16,16 +16,19 @@ const capicua = (numero) =>(typeof(numero) !== "number")
         :numero.toString().split('').reverse().join('') != numero
             ? console.log('No es numero capicua:false')
                 : console.log('Es numero capicua:true');          
-//capicua('2012');
+//capicua(123);
 
 //11)R/
  const factorial = (numero) =>{
     //iniciar variables
     let x = 1;
+    //Valida1
     if (typeof(numero) !== "number"){console.error('Ingrese valores numerico'); return;}
+    //valida2
+    if (Math.sign(numero) === -1){console.error('Ingrese un numero positivo'); return;}
     //recorrer el numero para multiplicarlo
     for(let i=1; i<numero; i++){ x = x * (i+1) }
     //salida
     console.log(x);
  }
- //factorial(5);
+ factorial(-13);
